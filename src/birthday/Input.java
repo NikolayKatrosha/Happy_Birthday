@@ -59,7 +59,7 @@ public class Input {
         if (input.equals(s)) {
             return true;
         } else {
-            System.out.println("Отказано в доступе!");
+           textAnimation.getAnimation("Отказано в доступе! Нужен спец-допуск");
             getInput(s);
         }
         return true;

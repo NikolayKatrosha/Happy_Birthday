@@ -45,10 +45,10 @@ public class Texts {
         sleep(3000);
         textAnimation.getAnimation("Ваша квартира - Ваш корабль...");
         textAnimation.getAnimation("Нажмите \"F\", чтобы войти поговорить с бортовым компьютером:");
-        input.getInput("F");*/
+        input.getInput("F");
         textAnimation.getAnimation("Нажмите \"M\",чтобы зайти в меню, или \"E\", чтобы выйти из бортового компьютера");
 input.chooseInput("M","E");
-menu.functional();
+menu.functional();*/
     }
 
 

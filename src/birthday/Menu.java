@@ -8,25 +8,18 @@ public class Menu {
     Scanner scanner = new Scanner(System.in);
 
     void functional() throws InterruptedException {
-        textAnimation.getAnimation("Приветствуем вас в меню бортового компьютера Кайдзен-85");
+      textAnimation.getAnimation("Приветствуем вас в меню бортового компьютера Кайдзен-85");
         textAnimation.getAnimation("Чтобы получить отчет, нажмите \"Q\"");
         if (input.getInput("Q") == true) {
             information();
+        }
             System.out.println();
             System.out.println();
             get();
             textAnimation.getAnimation("Ваша задача, №451, доставить оборудование на Марс.");
-            textAnimation.getAnimation("Пройдите на мостик капитана корабля:");
-            textAnimation.getAnimation("Выберите комнату, в которую хотите войти");
-            textAnimation.getAnimation("Комната механика, нажмите:                         D2");
-            textAnimation.getAnimation("Комната  борт-инженера, нажмите:                   D1");
-            textAnimation.getAnimation("Комната биолога, нажмите:                          D9");
-            textAnimation.getAnimation("Ваша комната, нажмите:                             D7");
-            textAnimation.getAnimation("Комната помощника капитана, нажмите:               D3");
-            textAnimation.getAnimation("Мед-кабинет, нажмите:                              D13");
-            textAnimation.getAnimation("Комната капитана, нажмите:                         D8");
-            textAnimation.getAnimation("Капитанский мостик, нажмите:                       D11");
-        }
+            System.out.println();
+            doors();
+
     }
 
     void information() throws InterruptedException {
@@ -56,15 +49,28 @@ public class Menu {
             textAnimation.getAnimation("Чтобы узнать цель миссии, нажмите \"E\"");
             input.checkInput("E");
             goal();
-        }
-           else if (s.equals("E") == true) {
-                goal();
-            }
-
-         else {
+        } else if (s.equals("E") == true) {
+            goal();
+        } else {
             System.out.println("Команда не распознана");
             get();
         }
+
+    }
+
+    void doors() throws InterruptedException {
+        textAnimation.getAnimation("Пройдите на мостик капитана корабля, для дальнейших указаний:");
+        System.out.println();
+        System.out.println();
+        textAnimation.getAnimation("Выберите комнату, в которую хотите войти");
+        textAnimation.getAnimation("Комната механика, нажмите:                         D2");
+        textAnimation.getAnimation("Комната  борт-инженера, нажмите:                   D1");
+        textAnimation.getAnimation("Комната биолога, нажмите:                          D9");
+        textAnimation.getAnimation("Ваша комната, нажмите:                             D7");
+        textAnimation.getAnimation("Комната помощника капитана, нажмите:               D3");
+        textAnimation.getAnimation("Мед-кабинет, нажмите:                              D13");
+        textAnimation.getAnimation("Комната капитана, нажмите:                         D8");
+        textAnimation.getAnimation("Капитанский мостик, нажмите:                       D11");
     }
 }
 
